@@ -2,6 +2,7 @@
  * @file		bluetooth.c
  * @brief		Bluetooth library for KL46Z and HC-06 module
  */
+ 
 #include "MKL46Z4.h"
 #include "bluetooth.h"
 #include <string.h>

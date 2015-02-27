@@ -90,7 +90,7 @@ int main(void){
 	// infinite loop
 	while(1){													
 			
-		// Turn on orange diode on Zumo. Zumo will search for exit.
+		// Turn on orange diode on Zumo. Zumo will look for exit.
 		ledGreenOff();
 		// Wait for user reaction
 		while( !zumo_button_pressed() );

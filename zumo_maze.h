@@ -116,7 +116,7 @@ char		zm_nodeReaction( uint8_t node_type, uint8_t speed );
 
 /**
 	@brief	Function creates the shortest path based on previous.
-	@details	Function searches for 'T' reaction and right combination of adjacent values.
+	@details	Function looks for 'T' reaction and right combination of adjacent values.
 						Rules
 						<ul>
 							<li> LTR = T
