@@ -1,7 +1,14 @@
 /**
- * @file		zumo_ledArray.c
- * @brief		Library for Freescale KL46Z and Pololu Zumo Reflectance Sensor Array
- */
+	@file		zumo_ledArray.c
+	@brief		Library for Freescale KL46Z and Pololu Zumo Reflectance Sensor Array
+	@details	Requirements (hardware and software):
+						<ul>
+							<li> Sensor pinout (from left): PTA4, PTC1, PTD6, PTC2, PTD3,PTA5.
+							<li> Disabled NMI. In startup_MKL46Z4.s (line 202) replace FOPT EQU 0xFF  with  FOPT EQU 0xFB
+							<li> CLOCK_SETUP  in system_MKL46Z4.c  equals 1
+							<li> PEMicro soft in programmer. When there is CMSIS on PTC1 is always 'high' (probably pull-up resistor in programmer is not disabled).
+						</ul>
+*/
 
 #include "MKL46Z4.h"
 #include "zumo_ledArray.h"

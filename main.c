@@ -2,7 +2,7 @@
 	@file	main.c
 	@brief	Zumo maze solver main function.
 	@details	It uses bluetooth transmitter to send led sensors state, type of node,
-						performed reaction and whole track.
+						performed reaction and whole track. Please read zumo_ledArray.c/zumo_ledArray.h descryption before you download this code to chip.
 */
 #include "MKL46Z4.h"
 #include "bluetooth.h"
