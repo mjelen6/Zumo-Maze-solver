@@ -78,10 +78,12 @@ int main(void){
 	motorDriverInit();
 	la_init();
 	
+	
 	// Wait for user reaction
 	while( !zumo_button_pressed() );
 	_delay_ms( 1000 );
 
+	
 	// Calibrate itself
 	zm_calibration( 35 );
 
@@ -117,11 +119,11 @@ int main(void){
 		}while( reaction != 'F' );
 		
 		// Play some sound
-		zb_WRC_start();
+		zb_doubleBeep();
 		
 		
 		
-		// Optimize route
+		// Optimize route	
 		zm_routeOptimizer( nodeArr.tab , optimizedNodeArr.tab );
 		bt_sendChar( '\r' );
 		bt_sendChar( '\r' );
@@ -142,7 +144,7 @@ int main(void){
 			zm_driveToNode( 35 );
 			sendArrayState( la_getSensorState() );
 			
-			node_type =  zm_checkNode( 35 );
+			node_type = zm_checkNode( 35 );
 			sendArrayState( la_getSensorState() );
 			bt_sendChar( node_type );
 			bt_sendChar( '\r' );
@@ -154,6 +156,6 @@ int main(void){
 		}while( reaction != 'F' );
 		
 		// Play some sound
-		zb_WRC_start();
+		zb_doubleBeep();
 	}
 }

@@ -5,5 +5,6 @@
 
 void zumo_buzzer_init(void);
 void zb_WRC_start(void);
+void zb_doubleBeep(void);
 
 #endif

@@ -236,7 +236,7 @@ char zm_getReaction( NodeArr_t * node_array ){
 
 void zm_routeOptimizer( const char * old_route, char * new_route){
 
-	char temp[ MAX_NBR_OF_NODES ];
+	static char temp[ MAX_NBR_OF_NODES ];
   uint8_t compressed = 0;
 	
 	// Hop will be 1 or 3. It depend on 'T' command in node array.
@@ -246,7 +246,7 @@ void zm_routeOptimizer( const char * old_route, char * new_route){
   uint16_t route_table_length = strlen(old_route);
 	
 	// Clear temp array
-	for(i=0; i<route_table_length; i++)	*((char*)temp+i) = 0;
+	//for(i=0; i<route_table_length; i++)	*((char*)temp+i) = 0;
 
 	// Read each command
 	for( i=0; i<route_table_length; i += hop ){

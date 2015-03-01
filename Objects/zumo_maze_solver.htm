@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\zumo_maze_solver.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\zumo_maze_solver.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050041: Last Updated: Sat Feb 28 15:53:06 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050041: Last Updated: Sun Mar 01 18:22:36 2015
 <BR><P>
-<H3>Maximum Stack Usage =        148 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =         72 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-__rt_entry_main &rArr; main &rArr; zm_routeOptimizer &rArr;  zm_routeOptimizer (Cycle)
+__rt_entry_main &rArr; main &rArr; zm_driveToNode &rArr; driveForward &rArr; driveForwardRightTrack &rArr; __aeabi_idivmod
 <P>
 <H3>
 Functions with no stack information
@@ -183,8 +183,8 @@ Global Symbols
 <P><STRONG><a name="[a6]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[39]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 148 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; zm_routeOptimizer &rArr;  zm_routeOptimizer (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; zm_driveToNode &rArr; driveForward &rArr; driveForwardRightTrack &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -223,7 +223,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[3a]"></a>main</STRONG> (Thumb, 314 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = main &rArr; zm_routeOptimizer &rArr;  zm_routeOptimizer (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = main &rArr; zm_driveToNode &rArr; driveForward &rArr; driveForwardRightTrack &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zumo_buzzer_init
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zumo_button_pressed
@@ -235,7 +235,7 @@ Global Symbols
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_clearArray
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_checkNode
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zb_WRC_start
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zb_doubleBeep
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motorDriverInit
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_init
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
@@ -685,7 +685,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[52]"></a>zb_WRC_start</STRONG> (Thumb, 296 bytes, Stack size 0 bytes, zumo_buzzer.o(.text))
+<P><STRONG><a name="[b8]"></a>zb_WRC_start</STRONG> (Thumb, 296 bytes, Stack size 0 bytes, zumo_buzzer.o(.text), UNUSED)
+
+<P><STRONG><a name="[52]"></a>zb_doubleBeep</STRONG> (Thumb, 136 bytes, Stack size 0 bytes, zumo_buzzer.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -865,8 +867,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
 </UL>
 
-<P><STRONG><a name="[53]"></a>zm_routeOptimizer</STRONG> (Thumb, 292 bytes, Stack size 136 bytes, zumo_maze.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 148 + In Cycle
+<P><STRONG><a name="[53]"></a>zm_routeOptimizer</STRONG> (Thumb, 270 bytes, Stack size 32 bytes, zumo_maze.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44 + In Cycle
 <LI>Call Chain = zm_routeOptimizer &rArr;  zm_routeOptimizer (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
@@ -896,14 +898,14 @@ Global Symbols
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
 
-<P><STRONG><a name="[b8]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text), UNUSED)
+<P><STRONG><a name="[b9]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[5f]"></a>__aeabi_uidivmod</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_init
 </UL>
 
-<P><STRONG><a name="[b9]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
+<P><STRONG><a name="[ba]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[59]"></a>__aeabi_idivmod</STRONG> (Thumb, 326 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_idivmod
