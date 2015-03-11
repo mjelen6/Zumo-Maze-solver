@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\zumo_maze_solver.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\zumo_maze_solver.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050041: Last Updated: Sun Mar 01 18:22:36 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050041: Last Updated: Mon Mar 02 01:41:43 2015
 <BR><P>
 <H3>Maximum Stack Usage =         72 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -24,7 +24,7 @@ Mutually Recursive functions
  <LI><a href="#[9]">PendSV_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[9]">PendSV_Handler</a><BR>
  <LI><a href="#[a]">SysTick_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[a]">SysTick_Handler</a><BR>
  <LI><a href="#[1a]">ADC0_IRQHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1a]">ADC0_IRQHandler</a><BR>
- <LI><a href="#[53]">zm_routeOptimizer</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[53]">zm_routeOptimizer</a><BR>
+ <LI><a href="#[6b]">zm_routeOptimizer</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[6b]">zm_routeOptimizer</a><BR>
 </UL>
 <P>
 <H3>
@@ -192,7 +192,7 @@ Global Symbols
 
 <P><STRONG><a name="[a7]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
-<P><STRONG><a name="[57]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
+<P><STRONG><a name="[41]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 </UL>
 
@@ -206,56 +206,21 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
 </UL>
 
-<P><STRONG><a name="[40]"></a>sendArrayState</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = sendArrayState &rArr; bt_sendChar &rArr; to_UART_buffer &rArr; __aeabi_idivmod
-</UL>
-<BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
-</UL>
-<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[42]"></a>sendRoute</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = sendRoute &rArr; bt_sendChar &rArr; to_UART_buffer &rArr; __aeabi_idivmod
-</UL>
-<BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
-</UL>
-<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[3a]"></a>main</STRONG> (Thumb, 314 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = main &rArr; zm_driveToNode &rArr; driveForward &rArr; driveForwardRightTrack &rArr; __aeabi_idivmod
-</UL>
-<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zumo_buzzer_init
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zumo_button_pressed
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zumo_button_init
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_routeOptimizer
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_nodeReaction
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_driveToNode
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_clearArray
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_checkNode
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zb_doubleBeep
-<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motorDriverInit
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_init
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay_ms
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendRoute
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendArrayState
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledGreenOff
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledGreenOn
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledsInitialize
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_init
-</UL>
-<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
-</UL>
-
-<P><STRONG><a name="[43]"></a>zumo_button_init</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, zumo_button.o(.text))
+<P><STRONG><a name="[5c]"></a>zumo_button_init</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, zumo_button.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[49]"></a>zumo_button_pressed</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, zumo_button.o(.text))
+<P><STRONG><a name="[61]"></a>zumo_button_pressed</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, zumo_button.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[5e]"></a>zumo_buzzer_init</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, zumo_buzzer.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[a9]"></a>zb_WRC_start</STRONG> (Thumb, 296 bytes, Stack size 0 bytes, zumo_buzzer.o(.text), UNUSED)
+
+<P><STRONG><a name="[6a]"></a>zb_doubleBeep</STRONG> (Thumb, 136 bytes, Stack size 0 bytes, zumo_buzzer.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -387,250 +352,279 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[63]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 12 bytes, strlen.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strlen
-</UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_routeOptimizer
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendStr
-</UL>
+<P><STRONG><a name="[aa]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[a9]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[ab]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[aa]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
-
-<P><STRONG><a name="[ab]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[ac]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[3b]"></a>exit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, exit.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_call_atexit_fns (Weak Reference)
+<BR><BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit
+<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_call_atexit_fns (Weak Reference)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[ac]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[ad]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[86]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
-</UL>
+<P><STRONG><a name="[ae]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[ad]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
-
-<P><STRONG><a name="[3f]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
-</UL>
-
-<P><STRONG><a name="[ae]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
-
-<P><STRONG><a name="[af]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
-
-<P><STRONG><a name="[b0]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
-
-<P><STRONG><a name="[58]"></a>from_UART_buffer</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, bluetooth.o(.text))
+<P><STRONG><a name="[42]"></a>from_UART_buffer</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, bluetooth.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = from_UART_buffer &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_getChar
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_getChar
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART2_IRQHandler
 </UL>
 
-<P><STRONG><a name="[5d]"></a>buf_empty</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, bluetooth.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_getChar
+<P><STRONG><a name="[47]"></a>buf_empty</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, bluetooth.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_getChar
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART2_IRQHandler
 </UL>
 
-<P><STRONG><a name="[5a]"></a>overwrite_UART_buffer</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, bluetooth.o(.text))
+<P><STRONG><a name="[44]"></a>overwrite_UART_buffer</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, bluetooth.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = overwrite_UART_buffer &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART2_IRQHandler
 </UL>
 
-<P><STRONG><a name="[5b]"></a>to_UART_buffer</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, bluetooth.o(.text))
+<P><STRONG><a name="[45]"></a>to_UART_buffer</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, bluetooth.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = to_UART_buffer &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART2_IRQHandler
 </UL>
 
-<P><STRONG><a name="[5c]"></a>buf_full</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, bluetooth.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
+<P><STRONG><a name="[46]"></a>buf_full</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, bluetooth.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART2_IRQHandler
 </UL>
 
 <P><STRONG><a name="[19]"></a>UART2_IRQHandler</STRONG> (Thumb, 136 bytes, Stack size 8 bytes, bluetooth.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = UART2_IRQHandler &rArr; to_UART_buffer &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_full
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_UART_buffer
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;overwrite_UART_buffer
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_empty
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;from_UART_buffer
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_ClearPendingIRQ
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_full
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_UART_buffer
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;overwrite_UART_buffer
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_empty
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;from_UART_buffer
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_ClearPendingIRQ
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
 </UL>
-<P><STRONG><a name="[61]"></a>buf_clear</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, bluetooth.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_init
+<P><STRONG><a name="[4c]"></a>buf_clear</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, bluetooth.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_init
 </UL>
 
-<P><STRONG><a name="[46]"></a>bt_init</STRONG> (Thumb, 228 bytes, Stack size 16 bytes, bluetooth.o(.text))
+<P><STRONG><a name="[49]"></a>bt_init</STRONG> (Thumb, 228 bytes, Stack size 16 bytes, bluetooth.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = bt_init &rArr; NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_clear
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_ClearPendingIRQ
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_clear
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_ClearPendingIRQ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[41]"></a>bt_sendChar</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, bluetooth.o(.text))
+<P><STRONG><a name="[4d]"></a>bt_sendChar</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, bluetooth.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = bt_sendChar &rArr; to_UART_buffer &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_full
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_UART_buffer
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;overwrite_UART_buffer
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;from_UART_buffer
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_full
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_UART_buffer
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;overwrite_UART_buffer
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;from_UART_buffer
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendRoute
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendArrayState
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendStr
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendRoute
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendArrayState
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendStr
 </UL>
 
-<P><STRONG><a name="[62]"></a>bt_sendStr</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, bluetooth.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
+<P><STRONG><a name="[4e]"></a>bt_sendStr</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, bluetooth.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = bt_sendStr &rArr; bt_sendChar &rArr; to_UART_buffer &rArr; __aeabi_idivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[64]"></a>bt_getChar</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, bluetooth.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_empty
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;from_UART_buffer
+<P><STRONG><a name="[50]"></a>bt_getChar</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, bluetooth.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_empty
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;from_UART_buffer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_getStr
-</UL>
-
-<P><STRONG><a name="[65]"></a>bt_getStr</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, bluetooth.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_getChar
+<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_getStr
 </UL>
 
-<P><STRONG><a name="[44]"></a>ledsInitialize</STRONG> (Thumb, 304 bytes, Stack size 8 bytes, leds.o(.text))
+<P><STRONG><a name="[51]"></a>bt_getStr</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, bluetooth.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_getChar
+</UL>
+
+<P><STRONG><a name="[5d]"></a>ledsInitialize</STRONG> (Thumb, 304 bytes, Stack size 8 bytes, leds.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ledsInitialize
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[54]"></a>ledGreenOn</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, leds.o(.text))
+<P><STRONG><a name="[56]"></a>ledGreenOn</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, leds.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseB
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseB
 </UL>
 
-<P><STRONG><a name="[4c]"></a>ledGreenOff</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, leds.o(.text))
+<P><STRONG><a name="[64]"></a>ledGreenOff</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, leds.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[68]"></a>ledRedOn</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseA
+<P><STRONG><a name="[54]"></a>ledRedOn</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseA
 </UL>
 
-<P><STRONG><a name="[b1]"></a>ledRedOff</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
+<P><STRONG><a name="[af]"></a>ledRedOff</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
 
-<P><STRONG><a name="[67]"></a>ledsOff</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseC
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseB
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseA
+<P><STRONG><a name="[53]"></a>ledsOff</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseC
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseB
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseA
 </UL>
 
-<P><STRONG><a name="[b2]"></a>ledsOn</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
+<P><STRONG><a name="[b0]"></a>ledsOn</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
 
-<P><STRONG><a name="[66]"></a>phaseA</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, leds.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledsOff
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledRedOn
+<P><STRONG><a name="[52]"></a>phaseA</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, leds.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledsOff
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledRedOn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextLedState
-</UL>
-
-<P><STRONG><a name="[69]"></a>phaseB</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, leds.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledsOff
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledGreenOn
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextLedState
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextLedState
 </UL>
 
-<P><STRONG><a name="[6a]"></a>phaseC</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, leds.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledsOff
+<P><STRONG><a name="[55]"></a>phaseB</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, leds.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledsOff
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledGreenOn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextLedState
-</UL>
-
-<P><STRONG><a name="[b3]"></a>startStopFSM</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
-
-<P><STRONG><a name="[6b]"></a>nextLedState</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, leds.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseC
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseB
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseA
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledsService1ms
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextLedState
 </UL>
 
-<P><STRONG><a name="[6c]"></a>ledsService1ms</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, leds.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextLedState
+<P><STRONG><a name="[57]"></a>phaseC</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, leds.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledsOff
+</UL>
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextLedState
 </UL>
 
-<P><STRONG><a name="[b4]"></a>fastSlowFSM</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
+<P><STRONG><a name="[b1]"></a>startStopFSM</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
 
-<P><STRONG><a name="[b5]"></a>changeDirLED</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
+<P><STRONG><a name="[58]"></a>nextLedState</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, leds.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseC
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseB
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;phaseA
+</UL>
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledsService1ms
+</UL>
+
+<P><STRONG><a name="[59]"></a>ledsService1ms</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, leds.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextLedState
+</UL>
+
+<P><STRONG><a name="[b2]"></a>fastSlowFSM</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
+
+<P><STRONG><a name="[b3]"></a>changeDirLED</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, leds.o(.text), UNUSED)
+
+<P><STRONG><a name="[5a]"></a>sendArrayState</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = sendArrayState &rArr; bt_sendChar &rArr; to_UART_buffer &rArr; __aeabi_idivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[5b]"></a>sendRoute</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = sendRoute &rArr; bt_sendChar &rArr; to_UART_buffer &rArr; __aeabi_idivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[3a]"></a>main</STRONG> (Thumb, 368 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = main &rArr; zm_driveToNode &rArr; driveForward &rArr; driveForwardRightTrack &rArr; __aeabi_idivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zumo_buzzer_init
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zumo_button_pressed
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zumo_button_init
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_routeOptimizer
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_nodeReaction
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_driveToNode
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_clearArray
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_checkNode
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zb_doubleBeep
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motorDriverInit
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_init
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay_ms
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendRoute
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendArrayState
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledGreenOff
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledGreenOn
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ledsInitialize
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendStr
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendChar
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
+</UL>
 
 <P><STRONG><a name="[1c]"></a>TPM0_IRQHandler</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, motordriver.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
 </UL>
-<P><STRONG><a name="[47]"></a>motorDriverInit</STRONG> (Thumb, 282 bytes, Stack size 0 bytes, motordriver.o(.text))
+<P><STRONG><a name="[5f]"></a>motorDriverInit</STRONG> (Thumb, 282 bytes, Stack size 0 bytes, motordriver.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[6d]"></a>driveForwardLeftTrack</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, motordriver.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = driveForwardLeftTrack &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveForward
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveRight
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_driveToNode
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_driveToNode
 </UL>
 
 <P><STRONG><a name="[6e]"></a>driveForwardRightTrack</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, motordriver.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = driveForwardRightTrack &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveForward
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveLeft
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_driveToNode
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_driveToNode
 </UL>
 
-<P><STRONG><a name="[b6]"></a>driveStopLeft</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, motordriver.o(.text), UNUSED)
+<P><STRONG><a name="[b4]"></a>driveStopLeft</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, motordriver.o(.text), UNUSED)
 
-<P><STRONG><a name="[b7]"></a>driveStopRight</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, motordriver.o(.text), UNUSED)
+<P><STRONG><a name="[b5]"></a>driveStopRight</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, motordriver.o(.text), UNUSED)
 
 <P><STRONG><a name="[80]"></a>driveStop</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, motordriver.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_nodeReaction
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_driveToNode
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_checkNode
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
+<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_nodeReaction
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_driveToNode
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_checkNode
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
 </UL>
 
 <P><STRONG><a name="[6f]"></a>driveReverseLeftTrack</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, motordriver.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = driveReverseLeftTrack &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveReverse
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveLeft
@@ -639,7 +633,7 @@ Global Symbols
 <P><STRONG><a name="[70]"></a>driveReverseRightTrack</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, motordriver.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = driveReverseRightTrack &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveReverse
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveRight
@@ -651,8 +645,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveReverseLeftTrack
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveForwardRightTrack
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_nodeReaction
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_nodeReaction
 </UL>
 
 <P><STRONG><a name="[72]"></a>driveRight</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, motordriver.o(.text))
@@ -661,9 +655,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveReverseRightTrack
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveForwardLeftTrack
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_nodeReaction
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_nodeReaction
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
 </UL>
 
 <P><STRONG><a name="[73]"></a>driveForward</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, motordriver.o(.text))
@@ -672,8 +666,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveForwardRightTrack
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveForwardLeftTrack
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_driveToNode
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_checkNode
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_driveToNode
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_checkNode
 </UL>
 
 <P><STRONG><a name="[74]"></a>driveReverse</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, motordriver.o(.text), UNUSED)
@@ -681,21 +675,11 @@ Global Symbols
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveReverseLeftTrack
 </UL>
 
-<P><STRONG><a name="[45]"></a>zumo_buzzer_init</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, zumo_buzzer.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[b8]"></a>zb_WRC_start</STRONG> (Thumb, 296 bytes, Stack size 0 bytes, zumo_buzzer.o(.text), UNUSED)
-
-<P><STRONG><a name="[52]"></a>zb_doubleBeep</STRONG> (Thumb, 136 bytes, Stack size 0 bytes, zumo_buzzer.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
 <P><STRONG><a name="[78]"></a>la_pins_as_outputs_and_high</STRONG> (Thumb, 174 bytes, Stack size 0 bytes, zumo_ledarray.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PORTC_PORTD_IRQHandler
 <LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PORTA_IRQHandler
 <LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPTimer_IRQHandler
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_init
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_init
 </UL>
 
 <P><STRONG><a name="[75]"></a>la_pins_init</STRONG> (Thumb, 268 bytes, Stack size 8 bytes, zumo_ledarray.o(.text))
@@ -704,10 +688,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_ClearPendingIRQ
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
 </UL>
-<BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_init
+<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_init
 </UL>
 
-<P><STRONG><a name="[48]"></a>la_init</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, zumo_ledarray.o(.text))
+<P><STRONG><a name="[60]"></a>la_init</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, zumo_ledarray.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = la_init &rArr; la_pins_init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_pins_init
@@ -719,11 +703,11 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[7f]"></a>la_startCal</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, zumo_ledarray.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
+<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
 </UL>
 
 <P><STRONG><a name="[81]"></a>la_stopCal</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, zumo_ledarray.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
+<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
 </UL>
 
 <P><STRONG><a name="[7c]"></a>la_pins_as_inputs</STRONG> (Thumb, 130 bytes, Stack size 0 bytes, zumo_ledarray.o(.text))
@@ -747,24 +731,24 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[79]"></a>la_getPercentageReflectance</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, zumo_ledarray.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR><BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 
 <P><STRONG><a name="[7a]"></a>la_calculateSensorState</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, zumo_ledarray.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = la_calculateSensorState &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PORTC_PORTD_IRQHandler
 <LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PORTA_IRQHandler
 </UL>
 
-<P><STRONG><a name="[4f]"></a>la_getSensorState</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, zumo_ledarray.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_nodeReaction
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_driveToNode
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_checkNode
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
+<P><STRONG><a name="[67]"></a>la_getSensorState</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, zumo_ledarray.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_nodeReaction
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_driveToNode
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_checkNode
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -799,48 +783,48 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
 </UL>
-<P><STRONG><a name="[4d]"></a>zm_clearArray</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, zumo_maze.o(.text))
+<P><STRONG><a name="[65]"></a>zm_clearArray</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, zumo_maze.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4a]"></a>_delay_ms</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, zumo_maze.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_checkNode
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
+<P><STRONG><a name="[62]"></a>_delay_ms</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, zumo_maze.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_checkNode
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_calibration
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4b]"></a>zm_calibration</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, zumo_maze.o(.text))
+<P><STRONG><a name="[63]"></a>zm_calibration</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, zumo_maze.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = zm_calibration &rArr; driveRight &rArr; driveReverseRightTrack &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_stopCal
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_startCal
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveRight
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveStop
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay_ms
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay_ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4e]"></a>zm_driveToNode</STRONG> (Thumb, 256 bytes, Stack size 48 bytes, zumo_maze.o(.text))
+<P><STRONG><a name="[66]"></a>zm_driveToNode</STRONG> (Thumb, 256 bytes, Stack size 48 bytes, zumo_maze.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = zm_driveToNode &rArr; driveForward &rArr; driveForwardRightTrack &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveForward
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveStop
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveForwardRightTrack
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveForwardLeftTrack
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[50]"></a>zm_checkNode</STRONG> (Thumb, 194 bytes, Stack size 24 bytes, zumo_maze.o(.text))
+<P><STRONG><a name="[68]"></a>zm_checkNode</STRONG> (Thumb, 194 bytes, Stack size 24 bytes, zumo_maze.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = zm_checkNode &rArr; driveForward &rArr; driveForwardRightTrack &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveForward
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveStop
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay_ms
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delay_ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -848,44 +832,44 @@ Global Symbols
 <P><STRONG><a name="[82]"></a>zm_addReaction</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, zumo_maze.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = zm_addReaction
 </UL>
-<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_nodeReaction
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_nodeReaction
 </UL>
 
-<P><STRONG><a name="[51]"></a>zm_nodeReaction</STRONG> (Thumb, 226 bytes, Stack size 16 bytes, zumo_maze.o(.text))
+<P><STRONG><a name="[69]"></a>zm_nodeReaction</STRONG> (Thumb, 226 bytes, Stack size 16 bytes, zumo_maze.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = zm_nodeReaction &rArr; driveRight &rArr; driveReverseRightTrack &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_addReaction
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveRight
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveLeft
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveStop
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[83]"></a>zm_getReaction</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, zumo_maze.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
+<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_strictNodeReaction
 </UL>
 
-<P><STRONG><a name="[53]"></a>zm_routeOptimizer</STRONG> (Thumb, 270 bytes, Stack size 32 bytes, zumo_maze.o(.text))
+<P><STRONG><a name="[6b]"></a>zm_routeOptimizer</STRONG> (Thumb, 270 bytes, Stack size 32 bytes, zumo_maze.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44 + In Cycle
 <LI>Call Chain = zm_routeOptimizer &rArr;  zm_routeOptimizer (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_routeOptimizer
+<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_routeOptimizer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_routeOptimizer
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_routeOptimizer
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[55]"></a>zm_strictNodeReaction</STRONG> (Thumb, 418 bytes, Stack size 24 bytes, zumo_maze.o(.text))
+<P><STRONG><a name="[6c]"></a>zm_strictNodeReaction</STRONG> (Thumb, 418 bytes, Stack size 24 bytes, zumo_maze.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = zm_strictNodeReaction &rArr; driveRight &rArr; driveReverseRightTrack &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_getReaction
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveRight
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveLeft
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveStop
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_getSensorState
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -894,20 +878,27 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
 </UL>
 <P><STRONG><a name="[84]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 322 bytes, Stack size 16 bytes, system_mkl46z4.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR><BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
 
-<P><STRONG><a name="[b9]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text), UNUSED)
-
-<P><STRONG><a name="[5f]"></a>__aeabi_uidivmod</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_init
+<P><STRONG><a name="[4f]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 12 bytes, strlen.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strlen
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zm_routeOptimizer
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_sendStr
 </UL>
 
-<P><STRONG><a name="[ba]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
+<P><STRONG><a name="[b6]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text), UNUSED)
 
-<P><STRONG><a name="[59]"></a>__aeabi_idivmod</STRONG> (Thumb, 326 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text))
+<P><STRONG><a name="[4a]"></a>__aeabi_uidivmod</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_init
+</UL>
+
+<P><STRONG><a name="[b7]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
+
+<P><STRONG><a name="[43]"></a>__aeabi_idivmod</STRONG> (Thumb, 326 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_calculateSensorState
@@ -916,10 +907,10 @@ Global Symbols
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveReverseLeftTrack
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveForwardRightTrack
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveForwardLeftTrack
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextLedState
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_UART_buffer
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;overwrite_UART_buffer
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;from_UART_buffer
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextLedState
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;to_UART_buffer
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;overwrite_UART_buffer
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;from_UART_buffer
 </UL>
 
 <P><STRONG><a name="[36]"></a>__user_setup_stackheap</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, sys_stackheap_outer.o(.text))
@@ -932,38 +923,52 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_sh
 </UL>
 
+<P><STRONG><a name="[b8]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+
+<P><STRONG><a name="[86]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
+</UL>
+
+<P><STRONG><a name="[b9]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+
+<P><STRONG><a name="[3f]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
+</UL>
+
 <P><STRONG><a name="[85]"></a>__ARM_common_switch8</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, system_mkl46z4.o(i.__ARM_common_switch8), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
 </UL>
+
+<P><STRONG><a name="[ba]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, indicate_semi.o(.text), UNUSED)
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[5e]"></a>NVIC_ClearPendingIRQ</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, bluetooth.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_init
+<P><STRONG><a name="[48]"></a>NVIC_ClearPendingIRQ</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, bluetooth.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_init
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART2_IRQHandler
 </UL>
 
-<P><STRONG><a name="[60]"></a>NVIC_SetPriority</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, bluetooth.o(.text))
+<P><STRONG><a name="[4b]"></a>NVIC_SetPriority</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, bluetooth.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_init
+<BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_init
 </UL>
 
 <P><STRONG><a name="[77]"></a>NVIC_EnableIRQ</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, zumo_ledarray.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_pins_init
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_init
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_init
 </UL>
 
 <P><STRONG><a name="[76]"></a>NVIC_ClearPendingIRQ</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, zumo_ledarray.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_pins_init
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_init
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;la_init
 </UL>
 <P>
 <H3>
 Undefined Global Symbols
 </H3>
-<P><STRONG><a name="[56]"></a>_call_atexit_fns</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[40]"></a>_call_atexit_fns</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 </UL>
 <HR></body></html>

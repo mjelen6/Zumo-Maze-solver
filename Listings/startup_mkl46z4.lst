@@ -566,11 +566,11 @@ ARM Macro Assembler    Page 9
               00000100 
               00000000 
 Command Line: --debug --xref --cpu=Cortex-M0+ --apcs=interwork --depend=.\objec
-ts\startup_mkl46z4.d -o.\objects\startup_mkl46z4.o -IC:\Users\Maciek\Desktop\Zu
-mo_maze_solver\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include -IC:\Kei
-l_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.3.0\Device\Include --predefine="__EVAL SE
-TA 1" --predefine="_RTE_ SETA 1" --predefine="MKL46Z256xxx4 SETA 1" --list=.\li
-stings\startup_mkl46z4.lst RTE\Device\MKL46Z256xxx4\startup_MKL46Z4.s
+ts\startup_mkl46z4.d -o.\objects\startup_mkl46z4.o -I"C:\Users\Maciek\Desktop\Z
+umo_maze_solver - Kopia\RTE" -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Includ
+e -IC:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.3.0\Device\Include --predefine=
+"__EVAL SETA 1" --predefine="_RTE_ SETA 1" --predefine="MKL46Z256xxx4 SETA 1" -
+-list=.\listings\startup_mkl46z4.lst RTE\Device\MKL46Z256xxx4\startup_MKL46Z4.s
 
 
 

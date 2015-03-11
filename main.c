@@ -78,22 +78,25 @@ int main(void){
 	motorDriverInit();
 	la_init();
 	
-	
+	bt_sendStr("\rZumo Maze solver gotowy\rAby skalibrowac nacisnij przycisk...\r");
 	// Wait for user reaction
 	while( !zumo_button_pressed() );
 	_delay_ms( 1000 );
 
-	
+	bt_sendStr("Kalibruje...\r");
 	// Calibrate itself
 	zm_calibration( 35 );
 
-	
+	bt_sendStr("Kalibracja zakonczona\r");
 	
 	// infinite loop
 	while(1){													
 			
 		// Turn on orange diode on Zumo. Zumo will look for exit.
 		ledGreenOff();
+		
+		bt_sendStr("Faza 1: Rozpoznanie trasy\rAby kontynuowac nacisnij przycisk...\r");
+		
 		// Wait for user reaction
 		while( !zumo_button_pressed() );
 		_delay_ms( 1000 );
@@ -122,12 +125,14 @@ int main(void){
 		zb_doubleBeep();
 		
 		
-		
+		bt_sendStr("\r\rFaza 2: Optymalizacja trasy\r");
 		// Optimize route	
 		zm_routeOptimizer( nodeArr.tab , optimizedNodeArr.tab );
 		bt_sendChar( '\r' );
 		bt_sendChar( '\r' );
+		bt_sendStr("Stara trasa\r");
 		sendRoute( nodeArr.tab );
+		bt_sendStr("\rNowa trasa\r");
 		sendRoute( optimizedNodeArr.tab );
 		bt_sendChar( '\r' );
 		bt_sendChar( '\r' );
@@ -135,6 +140,7 @@ int main(void){
 		// Turn off orange diode on Zumo. Zumo knows where is end.
 		ledGreenOn();
 		
+		bt_sendStr("Faza 3: Przejazd wg rozkazow\rAby kontynuowac nacisnij przycisk...\r");
 		// Wait for user reaction
 		while( !zumo_button_pressed() );
 		_delay_ms( 1000 );
@@ -155,6 +161,7 @@ int main(void){
 			
 		}while( reaction != 'F' );
 		
+		bt_sendStr("\rDojechalem!\r\r");
 		// Play some sound
 		zb_doubleBeep();
 	}
